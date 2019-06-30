@@ -26,9 +26,8 @@ RS Address Features:
 
 An RS address can appear in multiple time windows. For each appearance we compute its features in the graph of that given day. Features of RS addresses are stored in the ransom.csv.
 Lines are as given by column names:
-year,day,address,length,weight,count,looped,neighbors,income,label
-2011,246,199aKfZUiNXFuk3TADJB2JpWVNXKReL3yw,2,1.5,2,0,1,7e+07,3
-2011,254,199aKfZUiNXFuk3TADJB2JpWVNXKReL3yw,60,4.89385504471628e-07,39,0,2,3.07e+08,3
+2011,246,199aKfZUiNXFuk3TADJB2JpWVNXKReL3yw,2,1.5,2,0,1,7e+07
+2011,254,199aKfZUiNXFuk3TADJB2JpWVNXKReL3yw,60,4.89385504471628e-07,39,0,2,3.07e+08
 
 
 For feature descriptions, please see the paper. Income is given in terms of Satoshis (1Bitcoin=10^8 Satoshis).
@@ -41,7 +40,7 @@ The files are bigger than 100MB, could not be uploaded to Github. We share them 
 white1K: https://www.dropbox.com/s/d4uu7c4m079j4y2/white1K.csv?dl=0
 white2K: https://www.dropbox.com/s/8pb8oe9iuav6u56/white2K.csv?dl=0
 
-Next, we look at addresses that are not yet known to be RS addresses; we term them white addresses. In a day there can be >300K white addresses. We sample 1K, 2K, 10K and 100K addresses for each day. If the day has less than what we use, we take all addresses.  These are given in white1K and white2K.csv. White100K is 4.3GB, not included.
+Next, we look at addresses that are not yet known to be RS addresses; we term them white addresses. In a day there can be >300K white addresses. We sample 1K, 2K, 10K and 100K addresses for each day. If the day has less than what we use, we take all addresses.  These are given in white1K and white2K.csv. White100K is 4.3GB, not included. If you need it, please email Cuneyt Akcora.
 
 Example lines are: 
 year,day,address,length,weight,count,looped,neighbors,income,virus
@@ -50,4 +49,4 @@ year,day,address,length,weight,count,looped,neighbors,income,virus
 
 
 The virus column is always white in this white files. I kept this redundant information for defensive coding.
-White1K is exactly what we use in the paper. White100K is around 4.3GB. If you need it, please email Cuneyt Akcora.
+White1K is exactly what we use in the paper.  
