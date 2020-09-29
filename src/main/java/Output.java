@@ -5,7 +5,17 @@ public class Output {
     String address;
     int index;
     long amount;
+    int numOutputs;
 
+    public Output(String tx, String addr, int ind, long amo,int numOut) {
+        if(numOut <=0)
+            throw new RuntimeException("Error: A transaction has 0 outputs.");
+        numOutputs =numOut;
+        txID = tx;
+        address = addr;
+        index = ind;
+        amount = amo;
+    }
     public Output(String tx, String addr, int ind, long amo) {
         txID = tx;
         address = addr;
@@ -40,5 +50,13 @@ public class Output {
 
     public long getAmount() {
         return amount;
+    }
+
+    public int getOutputType() {
+        return numOutputs;
+    }
+
+    public String getAddress() {
+        return address;
     }
 }
